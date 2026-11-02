@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Dedal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="topbar">
+    <button data-act="prev" title="Назад (PageUp)">←</button>
+    <button data-act="next" title="Вперёд (PageDown)">→</button>
+    <button data-act="undo" title="Отменить (Ctrl+Z)">↶</button>
+    <button data-act="redo" title="Вернуть (Ctrl+Y)">↷</button>
+    <span class="sep"></span>
+    <button data-act="addPage">+ Лист</button>
+    <button data-act="delPage">− Лист</button>
+    <span class="sep"></span>
+    <button data-act="open">Открыть</button>
+    <button data-act="save">Сохранить</button>
+    <span class="sep"></span>
+    <button data-tool="table">Таблица</button>
+    <button data-tool="select">Выбрать</button>
+    <button data-tool="brush">Кисть</button>
+    <button data-tool="text">Текст</button>
+    <button data-tool="shape">Фигура</button>
+    <button data-tool="line">Линия</button>
+    <button data-tool="eraser">Ластик</button>
+    <button data-tool="fill">Заливка</button>
+    <button data-tool="image">Картинка</button>
+  </div>
+
+  <div id="optionsbar"></div>
+
+  <div id="main">
+    <aside id="left">
+      <div id="tabs">
+        <button data-tab="pages" class="active">Страницы</button>
+        <button data-tab="brush">Кисть</button>
+      </div>
+      <div id="tab-pages" class="tab"></div>
+      <div id="tab-brush" class="tab hidden"></div>
+    </aside>
+
+    <main id="canvas-area">
+      <div id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+      </div>
+      <button id="stretchBtn">Растянуть страницу</button>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
